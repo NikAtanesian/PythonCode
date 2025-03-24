@@ -1,0 +1,50 @@
+﻿"""
+Name: Nik Atanesian
+Date: 09/30/2023
+Program: Reading Files
+"""
+
+import random
+
+def main():
+
+    titleList = []
+    nameList = []
+    descriptorList = []
+
+    try:
+        with open("DND\\titles.txt","r") as f_titles:
+            for line in f_titles:
+                titleList.append(line)
+        # print(f_titles.read())
+    except IOError:
+        print("IO Error")
+    except NameError:
+        print("Name error")
+
+    try:
+        with open("DND\\names.txt","r") as f_names:
+            for line in f_names:
+                nameList.append(line)
+        # print(f_names.read())
+    except IOError:
+        print("IO Error")
+    except NameError:
+        print("Name error")
+
+    try:
+        with open("DND\\descriptors.txt","r") as f_descriptors:
+            for line in f_descriptors:
+                descriptorList.append(line)
+        # print(f_descriptors.read())
+    except IOError:
+        print("IO Error")
+    except NameError:
+        print("Name error")
+
+    print(random.choice(titleList).replace('\n',''),
+          random.choice(nameList).replace('\n',''),
+          random.choice(nameList).replace('\n',''), "the",
+          random.choice(descriptorList).replace('\n',''))
+
+main()

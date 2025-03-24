@@ -1,0 +1,30 @@
+﻿class Retailitem:
+    # The __init__ method initializes the attributes.
+    def __init__(self, description, units, price):
+        self.__description = description
+        self.__units = units
+        self.__price = price
+
+    # The set_description method sets the unit's description.
+    def set_description(self, description):
+        self.__description = description
+    
+    # The set_units method sets the number of units in stock.
+    def set_units(self, units):
+        self.__units = units
+    
+    # The set_price method sets the unit's price.
+    def set_price(self, price):
+        self.__price = price
+    
+    # The get_name method returns the units's description.
+    def get_description(self):
+        return self.__description
+    
+    # The get_animal_type method returns the number of units in stock.
+    def get_units(self):
+        return self.__units
+    
+    # The get_price method returns the unit's price.
+    def get_price(self):
+        return self.__price

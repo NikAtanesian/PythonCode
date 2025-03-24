@@ -1,0 +1,18 @@
+﻿"""
+Name: Nik Atanesian
+Date: 10/14/2023
+Program: Lottery Number Generator
+"""
+import random
+def main():
+    # What is the range of numbers that you want to print (a to b)?
+    number = list(range(0,10))
+    generate = random.randint(1,10)
+    prize = []
+    # How many numbers do you want to print (starts at 0)?
+    for i in range(6):
+        random.shuffle(number) 
+        prize.append(random.choice(number[:5])) 
+    prize.append(generate)
+    print(prize)
+main()

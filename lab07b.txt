@@ -1,0 +1,291 @@
+﻿"""
+Name: Nik Atanesian
+Date: 10/29/2023
+Description: String Practice
+"""
+# Answers have been commented out to prevent a mess.
+# Un-comment any answer that you would like to see.
+
+# Part 1:  Accessing Strings - POSITIVE and NEGATIVE Index
+# You are given the following string for all questions in this part.
+mystr = "fall for leaves"  #DO NOT CHANGE THIS
+
+#Q1: Write a print statement like:  print(f"{mystr[YOUR_INDEX_HERE]}") that will output "f", where
+# YOUR_INDEX_HERE is replaced by a NON-NEGATIVE number
+# Expected output:
+# f
+
+# Answer:
+# String start at zero, so if you only want to print the first letter, insert zero into the brackets.
+print(f"{mystr[0]}")
+
+
+#Q2: Write a print statment like:  print(f"{mystr[YOUR_INDEX_HERE]}") that will output "s", where
+# YOUR_INDEX_HERE is replaced by a NON-NEGATIVE number
+# Expected output:
+# s
+
+# Answer:
+# s is the fourteenth letter in the string, so insert 14.
+print(f"{mystr[14]}")
+
+
+#Q3: Write a print statment like:  print(f"{mystr[YOUR_INDEX_HERE]}") that will output "s", where
+# YOUR_INDEX_HERE is replaced by a NEGATIVE number
+# Expected output:
+# s
+
+# Answer:
+# Given that the string starts at 0, inserting a negative value will cause the program to go backwards.
+print(f"{mystr[-1]}")
+
+
+# Part 2:  Slicing Strings
+# You are given the following string for all questions in this Part.
+mystr = "fall for leaves"   #DO NOT CHANGE THIS
+
+#Q4: Write a print statement like:  print(f"{mystr[YOUR_START:YOUR_STOP:YOUR_STEP]}") that will output "all", where
+# YOUR_START, YOUR_STOP, and YOUR_STEP are replaced by numbers.  You may use less than 3 values in your print statement.
+# Expected output:
+# all
+
+# Answer:
+print(f"{mystr[1:4]}")
+
+
+#Q5: Write a print statement like:  print(f"{mystr[YOUR_START:YOUR_STOP:YOUR_STEP]}") that will output "leave", where
+# YOUR_START, YOUR_STOP, and YOUR_STEP are replaced by numbers.  You may use less than 3 values in your print statement.
+# Make YOUR_START a NON-NEGATIVE number, and YOUR_STOP a NEGATIVE number.
+# Expected output:
+# leave
+
+# Answer:
+print(f"{mystr[9:-1]}")
+
+
+#Q6: Write a print statement like:  print(f"{mystr[YOUR_START:YOUR_STOP:YOUR_STEP]}") that will output "alf", where
+# YOUR_START, YOUR_STOP, and YOUR_STEP are replaced by numbers.  You will need 3 values for this, and YOUR_STEP
+# should be a POSITIVE number.
+# Expected output:
+# alf
+
+# Answer:
+print(f"{mystr[1:-8:2]}")
+
+
+#Q7: Write a print statment like:  print(f"{mystr[YOUR_START:YOUR_STOP:YOUR_STEP]"}) that will output "sve", where
+# YOUR_START, YOUR_STOP, and YOUR_STEP are replaced by numbers.  You will need 3 values for this, and YOUR_STEP
+# # should be a NEGATIVE number.
+# Expected output:
+# sve
+
+# Answer:
+print(f"{mystr[14:6:-2]}")
+
+
+# Part 3:  String Methods and Built-in Python Functions
+# You are given the following strings for all questions in this part.
+mystr = "the cat goes Meow."  # DO NOT CHANGE THIS
+otherstr = "cookies>milk>fudge>cake>ice cream"   # DO NOT CHANGE THIS
+
+#Q8: Write a print statement like:  print(f"The length of the string is: {YOUR_CODE_HERE}") that will output the
+# length of the string.  Use a built-in python function.
+# Expected output:
+# The length of the string is: 18
+
+# Answer:
+# The len() operator returns the numerical length of the given string.
+print("The length of the string is: ", len(mystr))
+
+
+#Q9: Write a print statement like:  print(f"The words in the string are: {YOUR_CODE_HERE]") that will output the
+# list of words in the string.  Use a built-in python method.
+# Expected output:
+# The words in the string are: ["the","cat","goes","Meow."]
+
+# Answer:
+# The split operator splits the given string into a list.
+print("The words in the string are: ", mystr.split())
+
+
+#Q10: Write a print statement like:  print(f"The words in the string are: {YOUR_CODE_HERE]") that will output the
+# list of words in the string from string otherstr.  Use a built-in python method.
+# Expected output:
+# The words in the other string are:  ['cookies', 'milk', 'fudge', 'cake', 'ice cream']
+
+# Answer:
+# Adding a character to the split() operator will remove any instances of that character.
+print("The words in the string are: ", otherstr.split(">"))
+
+
+#Q11:  Write a print statement like:  print(f"{mystr.YOUR_METHOD_HERE()}") that will
+# output the following: "The cat goes meow."    Use a python string method.
+# Expected output:
+# The cat goes meow.
+
+# Answer:
+# The lower() operator sets every alphabetical character in a string to lowercase.
+print(f"{mystr.lower()}")
+
+
+#Q12:  Write a print statement like:  print(f"{mystr.YOUR_METHOD_HERE()}") that will
+# output the following: "THE CAT GOES MEOW."    Use a python string method.
+# Expected output:
+# THE CAT GOES MEOW.
+
+# Answer:
+# The upper() operator sets every alphabetical character in a string to uppercase.
+print(f"{mystr.upper()}")
+
+
+#Q13:  Write a print statement like:  print(f"{mystr.YOUR_METHOD_HERE()}") that will
+# output the following: "the cat goes meow."    Use a python string method.
+# Expected output:
+# the cat goes meow.
+
+# Answer: same as Q11
+print(f"{mystr.lower()}")
+
+
+#Q14:  Write a print statement like:  print(f"Is {searchword} in otherstr? {YOUR_CODE_HERE}") that will
+# indicate True if the searchword is in the string otherstr.
+# Test your code with the two provided searchword, using string otherstr.
+# Expected output:
+# Is cookies in otherstr? True
+# Is chocolate in otherstr? False
+searchword1 = "cookies"          # DO NOT CHANGE THIS
+searchword2 = "chocolate"       # DO NOT CHANGE THIS
+# Uncomment these lines and fill in YOUR_CODE_HERE
+# print(f"Is {searchword1} in otherstr? {YOUR_CODE_HERE}")
+# print(f"Is {searchword2} in otherstr? {YOUR_CODE_HERE}")
+
+# Answer:
+searchword1 = "cookies"
+searchword2 = "chocolate"
+result = otherstr.find(searchword1)
+result2 = otherstr.find(searchword2)
+# If the search word is in the string, the program prints True.
+# If not, it will print False.
+if result != -1:
+    result = True
+else:
+    result = False
+if result2 != -1:
+    result2 = True
+else:
+    result2 = False
+print(f"Is {searchword1} in otherstr? {result}")
+print(f"Is {searchword2} in otherstr? {result2}")
+
+
+#Q15 Write a print statement that uses the REPETITION OPERATOR to display the provided string onestr
+# five times.  print(f"Repeated string is: {YOUR_CODE_HERE}")
+# Expected output:
+# Repeated string is: HappyHappyHappyHappyHappy
+onestr = "Happy"   # DO NOT CHANGE THIS
+# Uncomment this line and fill in YOUR_CODE_HERE
+# print(f"Repeated string is: {YOUR_CODE_HERE}")
+
+# Answer:
+# Using the * on a string will print it multiple times consecutively.
+print(f"Repeated string is: {onestr * 5}")
+
+
+# Part 4:  Putting Things Together
+# You are given different strings for each question in this part.
+
+# #Q16:  Using the following string "X-DSPAM-Confidence: 0.8475".
+# Use find and string slicing to extract the portion of the string after the colon character and
+# then use the float function to convert the extracted string into a floating point number called num.
+# print out the numeric value of num + 1 using print(f"One larger than num is {num + 1:.4f}")
+# Hint:  Create a variable say start_index and use the find method to find the index of the colon
+# in string mystr.  Then use string slicing to get the numeric part of the string: "0.8475".  Finally
+# use the float type converter to make that string a floating point number, and print it out with 4
+# digits after the decimal point.
+# Expected output:
+# One larger than num is:  1.8475
+mystr = "X-DSPAM-Confidence: 0.8475"  # DO NOT CHANGE THIS
+# num = YOUR_CODE_HERE
+# print(f"One larger than num is {num + 1:.4f}")
+
+# Answer:
+mystr = "X-DSPAM-Confidence: 0.8475"
+start_index = mystr.find(":")
+newStr = mystr[start_index+1:]
+newStr = float(newStr.strip())
+print(f"One larger than num is {newStr + 1:.4f}")
+
+
+#Q17:  Write a loop to determine how many characters in a string are numeric digits.
+# Display the count of numeric digits.  Use a python string method to check if each
+# position in the string is a numeric digit.  print(f"There are {count} numeric digits.")
+# Expected output:
+# There are 6 numeric digits.
+mystr = "The weather at 287 West 34th Street was humid.  I thought it was Gr8." # DO NOT CHANGE THIS
+# print(f"There are {count} numeric digits.")
+
+# Answer:
+# The isnumeric operator returns True if all of a string's characters are numeric.
+# In this case, the counter will increase by 1 for each instance of True.
+count = 0
+for i in mystr:
+    if (i.isnumeric()):
+        count += 1
+print(f"There are {count} numeric digits.")
+
+#Q18:  Write a loop to determine how many characters in a string are alphabetic.
+# Display the count of alphabetic digits.  Use a python string method to check if each
+# position in the string is alphabetic.  print(f"There are {count} alphabetic characters.")
+# Expected output:
+# There are 29 alphabetic characters.
+mystr = "Fred lives at 287 West 34th Street, London."  # DO NOT CHANGE THIS
+#print(f"There are {count} alphabetic characters.")
+
+# Answer:
+# The isnumeric operator returns True if all of a string's characters are alphabetical.
+# In this case, the counter will increase by 1 for each instance of True.
+count = 0
+for i in mystr:
+    if (i.isalpha()):
+        count += 1
+print(f"There are {count} alphabetic characters.")
+
+
+#Q19:  Write a loop to determine how many characters in a string are upper case/capital letters.
+# Display the count.  print(f"There are {count} upper case characters.")
+# Expected output:
+# There are 11 upper case characters.
+mystr = "Sun, Wind, and Fire.  All 3 are FORCES of Nature."  # DO NOT CHANGE THIS
+#print(f"There are {count} upper case characters.")
+
+# Answer:
+# The isnumeric operator returns True if all of a string's characters are uppercase.
+# In this case, the counter will increase by 1 for each instance of True.
+count = 0
+for i in mystr:
+    if (i.isupper()):
+        count += 1
+print(f"There are {count} upper case characters.")
+
+
+#Q20:  Write your own question, demonstrating a *different* concept you learned in this
+# lesson, either in the text, videos, or independent research.  Write your question with
+# (following the model shown above), including your expected output.
+# Then write the solution to your question.
+
+# YOUR QUESTION - Write your Question here, including Expected Output
+# Write a loop to determine how many characters in a string are spaces/whitespace.
+# Display the count.  print(f"There are {count} spaces.")
+# Expected output:
+# There are 3 spaces.
+mystr = "Show me the money."  # DO NOT CHANGE THIS
+#print(f"There are {count} space.")
+
+# SOLUTION - Write your Solution to Your Question Q20 here.
+# Seeing as there's no operation for whitespace (that I could find),
+# use an if statement to find the number of spaces.
+count = 0
+for i in mystr:
+    if (i == " "):
+        count = count + 1
+print(f"There are {count} spaces.")

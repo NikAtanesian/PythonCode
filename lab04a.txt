@@ -1,0 +1,15 @@
+﻿"""
+Name: Nik Atanesian
+Date: 09/18/2023
+Program: Feet to Inches
+"""
+
+def main():
+    feet_to_inches()
+
+def feet_to_inches():
+    feet = int(input("How many feet? "))
+    inches = (feet * 12)
+    print(f'The number of inches is: {inches}')
+
+main()

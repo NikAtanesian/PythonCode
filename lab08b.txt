@@ -1,0 +1,86 @@
+﻿"""
+Name: Nik Atanesian
+Date: 11/10/2023
+Description: Capital Quiz Problem
+"""
+
+# Lists and dictionaris will alway start at zero, 
+# so make sure that the max value is one less than the number of items.
+MIN = 0
+MAX = 49
+# Importing random will allow for a different state to be chosen each time.
+import random
+def main():    
+    stateDict = {'Alabama': 'Montgomery',
+              'Alaska': 'Juneau',
+              'Arizona': 'Phoenix',
+              'Arkansas': 'Little Rock',
+              'California': 'Sacramento',
+              'Colorado': 'Denver',
+              'Connecticut': 'Hartford',
+              'Delaware': 'Dover',
+              'Florida': 'Tallahassee',
+              'Georgia': 'Atlanta',
+              'Hawaii': 'Honolulu',
+              'Idaho': 'Boise',
+              'Illinois': 'Springfield',
+              'Indiana': 'Indianapolis',
+              'Iowa': 'Des Moines',
+              'Kansas': 'Topeka',
+              'Kentucky': 'Frankfort',
+              'Louisiana': 'Baton Rouge',
+              'Maine': 'Augusta',
+              'Maryland': 'Annapolis',
+              'Massachusetts': 'Boston',
+              'Michigan': 'Lansing',
+              'Minnesota': 'Saint Paul',
+              'Mississippi': 'Jackson',
+              'Missouri': 'Jefferson City',
+              'Montana': 'Helena',
+              'Nebraska': 'Lincoln',
+              'Nevada': 'Carson City',
+              'New Hampshire': 'Concord',
+              'New Jersey': 'Trenton',
+              'New Mexico': 'Santa Fe',
+              'New York': 'Albany',
+              'North Carolina': 'Raleigh',
+              'North Dakota': 'Bismarck',
+              'Ohio': 'Columbus',
+              'Oklahoma': 'Oklahoma City',
+              'Oregon': 'Salem',
+              'Pennsylvania': 'Harrisburg',
+              'Rhode Island': 'Providence',
+              'South Carolina': 'Columbia',
+              'South Dakota': 'Pierre',
+              'Tennessee': 'Nashville',
+              'Texas': 'Austin',
+              'Utah': 'Salt Lake City',
+              'Vermont': 'Montpelier',
+              'Virginia': 'Richmond',
+              'Washington': 'Olympia',
+              'West Virginia': 'Charleston',
+              'Wisconsin': 'Madison',
+              'Wyoming': 'Cheyenne'}    
+    statesList = list(stateDict)
+    # Always make sure the counter(s) starts at zero.
+    correct = 0
+    incorrect = 0
+    # The option to try another question is available.
+    again = "x"
+    while (again == "x"):
+        num = random.randint(MIN,MAX)
+        state = statesList[num]
+        answer = input(f"Enter the capital of {state}: ")
+        if (answer == stateDict[state]):
+            correct += 1
+            print("Correct")
+            again = input("Type x to play again, anything else to stop: ")
+        else:
+            incorrect += 1
+            print("Incorrect")
+            again = input("Type x to play again, anything else to stop: ")
+    # If done correctly, the number of correct and incorrect answers
+    # should be accurate.
+    print(f"You have {correct} correct answers")
+    print(f"You have {incorrect} incorrect answers")
+main()

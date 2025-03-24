@@ -1,0 +1,42 @@
+﻿"""
+Name: Nik Atanesian
+Date: 11/14/2023
+Description: Durham Tech Course Information
+"""
+
+# Each dictionary should have the course number as its key
+# and the value should match the variable.
+courseRoom = {"CSC151": "MC9239", 
+          "CSC121": "OCC11400"}
+courseInst = {"CSC151": "Bowman",
+              "CSC121": "Milla"}
+courseTime = {"CSC151": "5:45 PM - 7:25 PM",
+              "CSC121": "1:00 PM - 2:40 PM"}
+courseCredHours = {"CSC151": "3 credit hours",
+                   "CSC121": "3 credit hours"}
+
+def find_course(courseNumber):
+    # Use the get() method to link courseNumber to the dictionaires.
+    # This should allow accurate information to be printed.
+    room = courseRoom.get(courseNumber)
+    instructor = courseInst.get(courseNumber)
+    time = courseTime.get(courseNumber)
+    credHours = courseCredHours.get(courseNumber)
+    # These will only print after the user gives an input.
+    print(f"The course number is {courseNumber}.")
+    print(f"The class meets in room {room}.")
+    print(f"The course is taught by {instructor}.")
+    print(f"The class will meet from {time}.")
+    print(f"The number of credit hours is {credHours}.")
+
+def main():
+    continueProgram = True
+    while(continueProgram):
+        print("Type q to quit.")
+        user_input = input("What course are you looking for? ")
+        if (user_input == "q"):
+            continueProgram = False
+        else:
+            find_course(user_input)
+
+main()

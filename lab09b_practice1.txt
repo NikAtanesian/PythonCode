@@ -1,0 +1,30 @@
+﻿"""
+Name: Nik Atanesian
+Date: 11/30/2023
+Assignment:  Lab09b - Practice Exercise #1 - Debugging
+
+The program should create a class that prints the title and author of a book.
+Correct the 7 errors in the following code.
+Each of the 7 errors is all the fixes on a single line of code.
+
+When fixed, the program should display:
+Your book is The Odyssey by Homer
+
+For full credit, write comments and complete the docstring in this code!
+"""
+
+class Book:
+
+    # The __init__ method initializes the attributes.
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+    
+    # The __str__ method returns a readable string form of an object (or objects).
+    def __str__(self):
+        return f"Your book is {self.title} by {self.author}"
+
+# Put the string objects in the same order 
+# as the objects in the __str__ method.
+book = Book("The Odyssey", "Homer")
+print(book)

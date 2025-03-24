@@ -1,0 +1,26 @@
+﻿"""
+Name: Nik Atanesian
+Date: 09/18/2023
+Program: Random Counter
+"""
+import random
+
+def main():
+    random_counter()   
+
+def random_counter():
+    even_count, odd_count = 0, 0
+    random_number = 0
+    for random_number in range(100):
+        random_number = random.randint(0,1000)
+        if random_number %2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    print(f"Number of even numbers: {even_count}" )
+    print(f"Number of odd numbers: {odd_count}" )
+    
+main()
+# Instead of just calling just a number, the function needs to call a random number in order for the loop to properly count the number of even and odd numbers.
+# If it just calls a number, the loop alternates and results in 50/50 each time.
+# However, because the variable is attached to the random number generator, the loop pays attention to each number and accurately states whether the number is even or odd.

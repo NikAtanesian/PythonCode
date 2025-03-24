@@ -1,0 +1,38 @@
+﻿"""
+Name: Nik Atanesian
+Date: 11/2/2023
+Description: Alphabetic Telephone Number Translator
+"""
+
+# phone number is 555-GET-FOOD or 555-438-3663
+def PhoneNumber(phoneNumber):
+    num = phoneNumber.split('-')
+    areaCode = num[0]
+    numEnd = num[1:]
+    digit = ''
+    for i in numEnd:
+        # Assign each group of letters to their respective number.
+        # Fun fact: phones with this system have no Z. Why is beyond me.
+        for n in range(len(i)):
+            if i[n] in "ABC":
+                digit = digit + "2"
+            elif i[n] in "DEF":
+                digit = digit + "3"
+            elif i[n] in "GHI":
+                digit = digit + "4"
+            elif i[n] in "JKL":
+                digit = digit + "5"
+            elif i[n] in "MNO":
+                digit = digit + "6"
+            elif i[n] in "PQRS":
+                digit = digit + "7"
+            elif i[n] in "TUV":
+                digit = digit + "8"
+            elif i[n] in "WXY":
+                digit = digit + "9"
+        digit = digit + "-"
+    return areaCode + "-" + digit[:-1]
+
+phoneNumber = input("Enter the phone number: ")
+translated = PhoneNumber(phoneNumber)
+print("When translated, the number is: ", translated)

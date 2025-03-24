@@ -1,0 +1,37 @@
+﻿"""
+Name: Nik Atanesian
+Date: 10/14/2023
+Program: Utility Functions for Lists
+"""
+
+# Input the threshold value and the different list numbers.
+def main():
+    nums = []
+    myThreshold = int(input("Please give me a threshold value: "))
+    for x in range(10):
+        user_input = int(input("Please give me a number: "))
+        nums.append(user_input)
+    listStatistics(nums)
+    newList = largerthan(myThreshold, nums)
+    print(newList)
+
+# Establish the number of items in the list, the largest, the smallest, 
+# the sum of the numbers, and the average of the numbers.
+def listStatistics(nums):
+    print("The number of items is: ", len(nums))
+    print("The largest item is: ", max(nums))
+    print("The smallest item is: ", min(nums))
+    print("The sum of all the numbers is: ", sum(nums))
+    print("The average of all the numbers is: ", (sum(nums) / len(nums)))
+
+# Clarify which numbers are greater than the threshold value.
+def largerthan(myThreshold, nums):
+    newNums = []
+    i = 0
+    while i < len(nums):
+        if nums[i] > myThreshold:
+            newNums.append(nums[i])
+        i += 1
+    return newNums
+
+main()

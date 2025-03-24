@@ -1,0 +1,23 @@
+﻿"""
+Name: Nik Atanesian
+Date: 10/14/2023
+Program: Charge Account Validator
+"""
+
+# Open file for reading
+valid_numbers = open("Charge\\charge_accounts.txt", "r")
+account_number = int(input("Please enter your charge acount number: "))
+flag = 0
+with open('Charge\\charge_accounts.txt') as f:
+    lines =  (f.read().splitlines())
+numbers =[int(e.strip()) for e in lines]
+# Check to see if the number is valid or invalid
+for eachelement in numbers :
+    if eachelement == account_number :
+        print ('The number is valid')
+        flag =1
+        break;
+if (flag ==0) :
+    print ('The number is invalid')
+# Close the file
+valid_numbers.close()

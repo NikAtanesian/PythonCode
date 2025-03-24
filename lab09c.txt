@@ -1,0 +1,21 @@
+﻿"""
+Name: Nik Atanesian
+Date: 11/29/2023
+Description: Retail Items Class Problem
+"""
+
+import retailitem
+
+# Get the item's description, stock, and price.
+# Use a range function to doument and print information 
+# for multiple different items.
+for item in range(3):
+    description = input("What is the description of the item? ")
+    units = input("How many units are in stock? ")
+    price = input("How much is the item? ")
+    # Create an instance of the Retailitem class.
+    retail_item = retailitem.Retailitem(description, units, price)
+    print("Here is the information your entered:")
+    print("Description: ", retail_item.get_description())
+    print("Units in Inventory: ", retail_item.get_units())
+    print("Price: ", retail_item.get_price())
